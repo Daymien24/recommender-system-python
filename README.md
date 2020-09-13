@@ -9,7 +9,7 @@ The system comes with 4 different algorithms to recommend movies.
 	* Matric Factorization (vectorized)
 
 You can choose the method from the nav-bar on top. 
-Matrix Factorization is a lot faster than the other algorithms, because it is already trained, and the users and movies vectors are just loaded in from a file. The neighborhood methods must go through the whole set and calculated all of the weights for either users or movies. 
+Matrix Factorization is a lot faster than the other algorithms, because it is already trained, and the users and movies vectors are just loaded in from a file. The neighborhood methods must go through the whole set and calculate all of the weights for either users or movies. 
 
 ![ops, something went wrong](presentation.gif)
 
