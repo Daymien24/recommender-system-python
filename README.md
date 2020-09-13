@@ -1,6 +1,6 @@
 # About Recommender System
 This is a demo of a system that i want to expand in the future. The system uses a simple PostgreSQL data base just to save somewhere user rates and then based off them recommend movies using one of four algorithms.
-The login system is not developed yet, so anyone can log in with an username but with no password provided. Then that username is stored in database, so when they log in again, they have they rates already stored.
+The login system is not developed yet, so anyone can log in with an username but with no password provided. Then that username is stored in database, so when they log in again, they have theirs rates already stored.
 
 The system comes with 4 different algorithms to recommend movies.
 	* Item-based Neighborhood
@@ -53,7 +53,7 @@ If you want to know more about the topic, i wrote my graduation thesis about rec
 * pandas
 * pickle
 * sklearn
-And remember to download [data](https://drive.google.com/drive/folders/1CKiwOkzwr-PkInf9R0HlK1o-ivo4YVb-?usp=sharing) for our algorithms and extract all of them in data folder.
+* And remember to download [data](https://drive.google.com/drive/folders/1CKiwOkzwr-PkInf9R0HlK1o-ivo4YVb-?usp=sharing) for our algorithms and extract all of them in data folder.
 
 
 
