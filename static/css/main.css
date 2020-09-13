@@ -1,0 +1,197 @@
+
+
+html {
+  background: rgb(2,0,36)!important;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(78,60,116,1) 50%, rgba(13,86,101,1) 100%)!important;
+  /*background-repeat: repeat-y;*/
+  background-size: cover; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  
+}
+.logo
+{
+  border-radius: 65%;
+  height: 80px;
+  width: 100px;
+}
+
+img:hover
+{
+  box-shadow: 0 0 2px 1px rgba(0, 140, 185, 0.5);
+}
+
+.tabelka
+{
+  background-image: url("../img/back2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  
+  padding-top: 170px !important;
+  color: white;
+  height: auto;
+  width: auto;
+}
+
+
+.butonek
+{
+  position: fixed;
+  top:40%;
+  left: 47%;
+  display: flex;
+}
+
+
+.searchek
+{
+  position: fixed;
+  left:35%;
+  top:26%; 
+  display: block;
+  width: 30%;
+  max-width: 525px;
+  margin:0 auto;
+}
+.metoda{
+  position: fixed;
+  top:47%;
+  left: 42%;
+  display: block;
+  max-width: 525px;
+}
+
+.tlo{
+  background: rgb(2,0,36)!important;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(78,60,116,1) 50%, rgba(13,86,101,1) 100%)!important;
+  /*background-repeat: repeat-y;*/
+  background-size: cover; 
+}
+
+.table{
+  color: white!important;
+}
+
+.bold-font{
+  font-weight: bold!important;
+}
+
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background: aqua!important;
+  opacity: 0.9!important;
+  color: black!important;
+}
+.jumbotron{
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: transparent!important;
+}
+body {
+  /*background-image: url("../img/back2.jpg");*/ /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  /*height: 900px;*/ /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  max-width: 100%;
+  
+
+    /*background-image: url(../img/back2.jpg);
+    background-color: #fff;
+    background-repeat: no-repeat;*/
+    font-family: 'Open Sans', sans-serif;
+    line-height: 21px;
+	  font-size: 13px;
+    color: #6a737b;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure, p {
+    margin: 0;
+}
+
+a {
+    color: #fff;
+	
+    -webkit-transition: all .3s ease-in 0s;
+       -moz-transition: all .3s ease-in 0s;
+        -ms-transition: all .3s ease-in 0s;
+         -o-transition: all .3s ease-in 0s;
+            transition: all .3s ease-in 0s;
+}
+
+iframe {
+    border: 0;
+}
+
+a, a:focus, a:hover {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:focus, a:hover {
+    color: #6CB670;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  height: 900px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+p{
+  margin-top: 40px;
+  color: white!important;
+}
+
+#navigation {
+  background-color: rgba(16, 22, 54, 0.2);
+  border: 0 none;
+  margin: 0;
+  
+    -webkit-transition: background-color 800ms linear;
+       -moz-transition: background-color 800ms linear;
+	    -ms-transition: background-color 800ms linear;
+         -o-transition: background-color 800ms linear;
+			transition: background-color 800ms linear;
+}
+
+.navbar-toggle i {
+	color: #fff;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-nav li a {
+	border-top: 1px solid transparent;
+  font-weight: bold;
+}
+
+.navbar-nav li a.current,
+.navbar-nav li a:focus,
+.navbar-nav li a:hover {
+	background-color: transparent;
+	border-top: 1px solid #32B0EE;
+	color: #fff;
+}
+
+

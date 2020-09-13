@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <!-- meta charec set -->
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Page Title -->
+    <title>Rekomendejszyn system</title>
+    
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Google Font -->
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- CSS
+    ================================================== -->
+    <!-- Fontawesome Icon font -->
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <!-- Twitter Bootstrap css -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- jquery.fancybox  -->
+    <link rel="stylesheet" href="../static/css/jquery.fancybox.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <!-- media-queries -->
+    <link rel="stylesheet" href="../static/css/media-queries.css">
+    <!-- star css -->
+    <link rel="stylesheet" type="text/css" href="../static/css/star.css">
+    <!-- Modernizer Script for old Browsers -->
+    <script src="../static/js/modernizr-2.6.2.min.js"></script>
+</head>
+<body id="body">
+    
+    <!--
+    Fixed Navigation
+    ==================================== -->
+    <header id="navigation" class="navbar-fixed-top navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars fa-2x"></i>
+                </button>
+                <!-- /responsive nav button -->
+                
+                <!-- logo -->
+                <a class="navbar-brand" href="{{ url_for('start') }} ">
+                    <h1 id="logo">
+                    <img class="logo" src="../static/img/logo1.png" alt="Movie">
+                    </h1>
+                </a>
+                <!-- /logo -->
+            </div>
+            <!-- main nav -->
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('favs') }}">My ratings</a></li>
+                    <li><a href="{{ url_for('mylist_page') }}">My list</a></li>
+                    <li><a href="{{ url_for('titles') }}">Ranking</a></li>
+                    <li><a href="{{ url_for('recom') }}">Rekommend U-U</a></li>
+                    <li><a href="{{ url_for('recom_i_i') }} ">Rekommend I-I</a></li>
+                    <li><a href="{{ url_for('recom_mf') }} ">Rekommend MF</a></li>
+                    <li><a href="{{ url_for('index') }}">Logout</a></li>
+                </ul>
+            </nav>
+            <!-- /main nav -->
+            
+        </div>
+    </header>
+    
+    
+    
+    
+    
+    <div class="card-body tlo">
+        <div class="row jumbotron tlo">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                <p class="card-title bold-font">Twoje rekomendacje</p>
+                <table class='table table-dark table-hover'>
+                    
+                    
+                    {% for title in rekomendacje %}
+                        <tr>
+                            <form action="{{url_for('add_to_mylist')}}" method="POST">
+                            <td name="title"> <input type="hidden" name="title" value="{{title}}">{{title}}</input></td>
+                            <td class="float-right">
+                                <button class="btn btn-primary badge-pill" type="submit" value="Submit">Moja Lista +</button>
+                            </td>
+                            
+                        </tr>
+                    </form>
+                    {% endfor %}
+                </table>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+<!-- Essential jQuery Plugins
+================================================== -->
+<!-- Main jQuery -->
+<script src="../static/js/jquery-1.11.1.min.js"></script>
+<!-- Single Page Nav -->
+<script src="../static/js/jquery.singlePageNav.min.js"></script>
+
+<!-- Custom Functions -->
+<script src="../static/js/custom.js"></script>
+
+
+</body>
+</html>

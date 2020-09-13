@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- meta charec set -->
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine or request Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Page Title -->
+	<title>Rekomendejszyn system</title>
+	
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Google Font -->
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- CSS
+	================================================== -->
+	<!-- Fontawesome Icon font -->
+	<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+	<!-- Twitter Bootstrap css -->
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<!-- jquery.fancybox  -->
+	<link rel="stylesheet" href="../static/css/jquery.fancybox.css">
+	<!-- animate -->
+	<link rel="stylesheet" href="../static/css/animate.css">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="../static/css/main.css">
+	<!-- media-queries -->
+	<link rel="stylesheet" href="../static/css/media-queries.css">
+	<!-- star css -->
+	<link rel="stylesheet" type="text/css" href="../static/css/star.css">
+	<!-- Modernizer Script for old Browsers -->
+	<script src="../static/js/modernizr-2.6.2.min.js"></script>
+</head>
+<body id="body">
+	<img src="../static/img/back2.jpg">
+	<!--
+	Fixed Navigation
+	==================================== -->
+	<header id="navigation" class="navbar-fixed-top navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- responsive nav button -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="fa fa-bars fa-2x"></i>
+				</button>
+				<!-- /responsive nav button -->
+				
+				<!-- logo -->
+				<a class="navbar-brand" href="{{ url_for('index') }} ">
+					<h1 id="logo">
+					<img class="logo" src="../static/img/logo1.png" alt="Movie">
+					</h1>
+				</a>
+				<!-- /logo -->
+			</div>
+			<!-- main nav -->
+			<nav class="collapse navbar-collapse navbar-right" role="navigation">
+				<ul class="nav navbar-nav">
+					<li><a href="{{ url_for('favs') }}">Ocenione filmy</a></li>
+					<li><a href="{{ url_for('titles') }}">Ranking filmow</a></li>
+					<li><a href="{{ url_for('recom') }}">Rekomenduj U-U</a></li>
+					<li><a href="{{ url_for('recom_i_i') }} ">Rekomenduj I-I</a></li>
+					<li><a href="{{ url_for('recom_mf') }} ">Rekomenduj MF</a></li>					
+				</ul>
+			</nav>
+			<!-- /main nav -->
+			
+		</div>
+	</header>
+	
+		
+			
+			<!-- SEARCH BOX -->
+			<div class="container">
+				
+				<form action="{{url_for('insert')}}" method="POST">
+				<div class="box searchek p-5">
+					<input class="form-control mx-auto" name="title" type="text" placeholder="Search" aria-label="Search" list="states-list">
+					<datalist id="states-list">
+					{% for movie in movies %}
+						<option>{{ movie }}</option>
+					{% endfor %}
+					</datalist>
+				</div>
+				<div class="container">
+					<div class="rating mt-5">						
+						<input type="radio" name="star" id="star1" value='5'>
+						<label for="star1" name="star"></label>
+						<input type="radio" name="star" id="star2" value='4'>
+						<label for="star2" name="star"></label>
+						<input type="radio" name="star" id="star3" value='3'>
+						<label for="star3" name="star"></label>
+						<input type="radio" name="star" id="star4" value='2'>
+						<label for="star4" name="star"></label>
+						<input type="radio" name="star" id="star5" value='1'>
+						<label for="star5" name="star"></label>
+						
+					</div>
+					<div class="butonek">
+							<button type="submit" value="Submit" class="btn btn-dark">Dodaj</button>
+					</div>
+				</div>
+					</form>
+
+
+	<!-- Essential jQuery Plugins
+	================================================== -->
+	<!-- Main jQuery -->
+	<script src="../static/js/jquery-1.11.1.min.js"></script>
+	<!-- Single Page Nav -->
+	<script src="../static/js/jquery.singlePageNav.min.js"></script>
+		
+	<!-- Custom Functions -->
+	<script src="../static/js/custom.js"></script>
+	
+	
+</body>
+</html>
